@@ -2,7 +2,7 @@
 // Regenerates portal/manifest.json from the files actually committed to this repository.
 // Run from the repository root (that's what the deploy workflow does).
 import { execFileSync } from 'node:child_process';
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -46,12 +46,23 @@ for (const f of files) {
   }
 }
 
-const manifest = {
-  schema: 1,
-  files: files.map(({ path: p, size, modified }) => ({ path: p, size, modified })),
-  generatedAt: new Date().toISOString(),
-};
+const newFiles = files.map(({ path: p, size, modified }) => ({ path: p, size, modified }));
 
+// Only touch the file, and only advance generatedAt, when the actual file list changed.
+// Otherwise generatedAt would tick forward on every run even with nothing new, which
+// would make every run look like a change and commit a no-op update forever.
 const outPath = path.join(ROOT, 'manifest.json');
+let previous = null;
+try {
+  previous = JSON.parse(readFileSync(outPath, 'utf8'));
+} catch {
+  /* no existing manifest, or it doesn't parse: treat as "nothing to compare against" */
+}
+if (previous && JSON.stringify(previous.files) === JSON.stringify(newFiles)) {
+  console.log(`No content changes (${newFiles.length} files) — manifest.json left untouched.`);
+  process.exit(0);
+}
+
+const manifest = { schema: 1, files: newFiles, generatedAt: new Date().toISOString() };
 writeFileSync(outPath, JSON.stringify(manifest, null, 2) + '\n');
-console.log(`Wrote ${files.length} file${files.length === 1 ? '' : 's'} to ${path.relative(ROOT, outPath)}`);
+console.log(`Wrote ${newFiles.length} file${newFiles.length === 1 ? '' : 's'} to ${path.relative(ROOT, outPath)}`);

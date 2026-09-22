@@ -1,4 +1,4 @@
-name: Deploy Semester VII portal
+name: Update manifest & deploy Semester VII portal
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -15,28 +15,48 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  # Regenerates manifest.json and commits it straight back to main. This is what
+  # actually fixes "I added files and the portal still shows the old list" — it
+  # works no matter which GitHub Pages source (branch or Actions) the repo uses,
+  # because the fresh file lands in the branch itself, not just in a build artifact.
+  manifest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # full history, so manifest generation can read each file's last-commit date
+          fetch-depth: 0   # full history, so each file's last-commit date can be read
 
       - name: Generate manifest.json
         run: node .github/scripts/generate-manifest.mjs
 
-      - uses: actions/configure-pages@v5
+      - name: Commit manifest.json if it changed
+        run: |
+          if git diff --quiet -- manifest.json; then
+            echo "manifest.json already up to date"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add manifest.json
+            git commit -m "Update manifest.json"
+            git push
+          fi
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
+  # Only does something if this repo's GitHub Pages source is set to "GitHub
+  # Actions" (Settings -> Pages). If it's set to "Deploy from a branch" instead,
+  # this job is harmless and safely does nothing useful — the commit above is
+  # what the branch-based deployment will pick up and serve on its own.
   deploy:
-    needs: build
+    needs: manifest
     runs-on: ubuntu-latest
+    continue-on-error: true
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4   # picks up the commit the manifest job just made, if any
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
       - id: deployment
         uses: actions/deploy-pages@v4

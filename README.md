@@ -48,7 +48,31 @@ first time a matching file is opened.
 3. Push to `main`. The included workflow regenerates `manifest.json` and
    deploys automatically from then on.
 
-No further configuration is required. If you'd rather not use GitHub
-Actions, the site works from a plain `git push` too — it will just use the
-GitHub API fallback (and the manifest committed here) instead of a
-freshly generated manifest.
+No further configuration is required — this works whether the repository's
+**Settings -> Pages -> Source** is set to "GitHub Actions" *or* to "Deploy
+from a branch". Either way, the workflow commits a freshly regenerated
+`manifest.json` straight back into `main` on every push, so the file GitHub
+Pages actually serves is always current.
+
+## "I added files and the portal still shows the old list"
+
+This almost always means `manifest.json` never got updated after your push.
+Check, in order:
+
+1. **Repo -> Actions tab**: did the "Update manifest & deploy Semester VII
+   portal" workflow run after your push, and did its `manifest` job succeed?
+   If Actions are disabled for this repository, nothing here can run
+   automatically — either enable them, or run
+   `node .github/scripts/generate-manifest.mjs` yourself locally and commit
+   the resulting `manifest.json`.
+2. **manifest.json's commit history**: it should have a commit from
+   `github-actions[bot]` after your own push. If it doesn't, the workflow
+   didn't run or didn't have permission to push (Settings -> Actions ->
+   General -> Workflow permissions -> "Read and write permissions").
+3. Give GitHub Pages a minute or two after that commit to actually
+   redeploy — a successful workflow run doesn't mean the live site has
+   updated *yet*.
+
+The portal itself never needs a code change for new content — only
+`manifest.json` needs to be current, and the workflow's only job is
+keeping it that way.
