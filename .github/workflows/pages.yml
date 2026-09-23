@@ -1,0 +1,37 @@
+name: Deploy Semester VII portal
+
+# There's nothing to build or generate: the portal discovers subjects, folders and
+# files at request time by calling the GitHub REST API directly from the browser, so
+# this workflow only needs to publish the static files as-is. It only does something
+# if this repository's Settings -> Pages -> Source is set to "GitHub Actions". If it's
+# set to "Deploy from a branch" instead, GitHub Pages serves the branch directly and
+# this workflow isn't needed at all — delete it if that's how this repo is configured.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
