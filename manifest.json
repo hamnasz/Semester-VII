@@ -1,0 +1,231 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "Cloud Computing/Mids/Lab Tasks/Lab 1/Lab_01_Introduction_to_Cloud_Computing.docx",
+      "size": 17922,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Cloud Computing/Mids/Lab Tasks/Lab 2/Lab_02_Virtualization_Fundamentals.docx",
+      "size": 13256,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Cloud Computing/Mids/Lab Tasks/Lab 2/Solution.docx",
+      "size": 563444,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Cloud Computing/Mids/Slides/Week 1- Cloud Computing intro.ppt",
+      "size": 2899968,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Compiler Construction/Mids/Lab Task/Lab 1/WhatsApp Image 2026-09-19 at 8.31.02 AM.jpeg",
+      "size": 53664,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Compiler Construction/Mids/Lab Task/Lab 1/ilide.info-compiler-construction-lab-manual-pr_f3c821c17755e46137645996b4b30b74.pdf",
+      "size": 1019243,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Compiler Construction/Mids/Slides/DFA EXAMPLE Solution.docx",
+      "size": 115503,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Compiler Construction/Mids/Slides/Lecture 01 Introduction to compiler, Application of Compiler.pptx",
+      "size": 174090,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Compiler Construction/Mids/Slides/Lecture 02 Preprocessor......pptx",
+      "size": 384858,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Compiler Construction/Mids/Slides/Lecture 03 LA, SA, ICG, Code Generation, Code Optimization.pptx",
+      "size": 452796,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Compiler Construction/Mids/Slides/Lecture 04 Table Management, error handling, parser......pptx",
+      "size": 341355,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Compiler Construction/Mids/Slides/Lecture 05 Lexical analyzer, Lexeme generation, Token, Lexeme, Pattern.pptx",
+      "size": 1369589,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/ChatGPT Image Sep 18, 2026, 10_41_40 PM.png",
+      "size": 1330524,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/ChatGPT Image Sep 18, 2026, 11_26_53 PM.png",
+      "size": 1330524,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/ChatGPT Image Sep 18, 2026, 11_27_27 PM.png",
+      "size": 1282398,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/ChatGPT Image Sep 18, 2026, 11_27_46 PM.png",
+      "size": 1542810,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot AI — Literature Review and Research-Gap Analysis.docx",
+      "size": 531906,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot AI — Research Gap Analysis (Comparative).md",
+      "size": 35365,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_Flow_Diagrams.docx",
+      "size": 163303,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_Project_Proposal.docx",
+      "size": 126412,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_Project_Proposal_Formatted.docx",
+      "size": 167457,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_Revised_FYP_Proposal (1).docx",
+      "size": 130399,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_Revised_FYP_Proposal.docx",
+      "size": 129614,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_Revised_Final_Year_Project_Proposal.docx",
+      "size": 390757,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_TUF_Proposal_Defense (1).html",
+      "size": 267493,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_TUF_Proposal_Defense.html",
+      "size": 263312,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/DocBot_AI_TUF_Proposal_Defense_Animated.html",
+      "size": 286112,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/Final Internship Report Template.docx",
+      "size": 28315,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/Project Proposal.docx",
+      "size": 172168,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/Proposal Defense.html",
+      "size": 286368,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/faiza.pptx",
+      "size": 3365259,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/fig1_overall_workflow.png",
+      "size": 205018,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/fig2_qa_pipeline.png",
+      "size": 225935,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/fig3_monitoring_pipeline.png",
+      "size": 214718,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/fig4_system_architecture.png",
+      "size": 238354,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/fig5_data_flow.png",
+      "size": 202901,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Others/template.pptx",
+      "size": 170251,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Proposal Defense/Defence Proposal.pdf",
+      "size": 385278,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "FYP/Proposal Defense/DocBot AI - Proposal Defense (Revised).html",
+      "size": 286152,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Information Security/Finals/Lab Manual/Lab Manual.docx",
+      "size": 4467773,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Information Security/Mids/Slides/Lecture 1.pptx",
+      "size": 1227680,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Information Security/Mids/Slides/Lecture 2.pptx",
+      "size": 319237,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Information Security/Outline/Information_Security_Course_Content_Aligned.docx",
+      "size": 289123,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Knowledge Representation and Reasoning/Mids/Slides/AI401_Lecture01_Introduction_to_KRR.pdf",
+      "size": 446425,
+      "modified": "2026-09-23T05:06:10+00:00"
+    },
+    {
+      "path": "Knowledge Representation and Reasoning/Mids/Slides/AI401_Lecture02_Knowledge_Data_and_Code.pdf",
+      "size": 434092,
+      "modified": "2026-09-23T05:06:10+00:00"
+    }
+  ],
+  "generatedAt": "2026-09-23T05:08:07.944Z"
+}
